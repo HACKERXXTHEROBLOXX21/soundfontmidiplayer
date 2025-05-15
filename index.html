@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundFont MIDI Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SoundFont MIDI Player</h1>
+        <div class="upload-section">
+            <label for="midi-upload">Upload MIDI File:</label>
+            <input type="file" id="midi-upload" accept=".mid,.midi" />
+        </div>
+
+        <div class="upload-section">
+            <label for="sf2-upload">Upload SoundFont (SF2):</label>
+            <input type="file" id="sf2-upload" accept=".sf2" />
+        </div>
+
+        <div class="controls">
+            <button id="play">Play</button>
+            <button id="pause">Pause</button>
+            <button id="stop">Stop</button>
+            <label for="volume">Volume:</label>
+            <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5" />
+        </div>
+
+        <canvas id="waveform"></canvas>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.9/Tone.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sf2.js"></script>  <!-- FluidSynth alternative -->
+    <script src="script.js"></script>
+</body>
+</html>
